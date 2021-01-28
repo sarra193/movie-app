@@ -5,15 +5,35 @@ import Footer from './Componets/Footer/Footer'
 import { Data } from './data'
 import MovieList from './Componets/MovieList/MovieList'
 import bg from './img/IoAdd.jpg'
-import AddMovie from "./Componets/Header/AddMovie/AddMovie";
-import Popup from 'reactjs-popup';
+import AddMovie from "./Componets/AddMovie/AddMovie";
 function App() {
-const [add, setAdd] = useState(false)
 
+
+    const [add, setAdd] = useState(false)
+    const [search, setSearch] = useState('')
+  const [movies, setMovies] = useState(Data)
+  
+
+  
+  /* Search by name function */
+      const filterByName = Data.filter(movie => {
+            return  movie.Title.toLowerCase().includes( search.toLowerCase())
+      })
+
+/* adding object to data */
+  
+  const addMovie = (movie) => {
+    setMovies([...movies,movie])
+  }
+
+
+
+/* star rating function */
+ 
   return(
     <div style={{ backgroundImage: `url(${bg})` }}>
-    <NavBar movie={Data} />
-      <MovieList movies={Data} />
+    <NavBar movies={Data} setSearch={setSearch} />
+      <MovieList filterByName={filterByName} movies={Data} list={movies}  />
 
       <button className="btn" onClick={
           ()=> setAdd(!add)} >
@@ -23,7 +43,7 @@ const [add, setAdd] = useState(false)
           }
       </button>
       
-      {add && <AddMovie/>}
+      {add && <AddMovie addMovie={ addMovie}/>}
     <Footer/>
     </div>
   )
