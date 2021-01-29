@@ -4,12 +4,13 @@
       import Modal from 'react-modal';
 
       const customStyles = {
-      content : {
+            content: {
+      width                 :'500px',
       top                   : '50%',
       left                  : '50%',
       right                 : 'auto',
       bottom                : 'auto',
-      marginRight           : '-50%',
+      marginRight           :'-50%',
       transform             : 'translate(-50%, -50%)'
       }
       };
@@ -48,7 +49,7 @@
             <div class="add-icon"></div>
             <div class="btn-txt" onClick={openModal}>+</div>
             </button>
-            <Modal
+            <Modal 
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
             style={customStyles}
@@ -116,7 +117,7 @@
 
 
                                     
-                        <Button variant="outline-danger"  onClick={closeModal}>close</Button>
+                        <Button variant="outline-danger" style={{float:'right'}}  onClick={closeModal}>close</Button>
                         
                   </form>
             </Modal>
