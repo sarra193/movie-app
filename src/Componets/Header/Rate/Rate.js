@@ -1,12 +1,12 @@
 import React from 'react'
 import './Rate.css'
 function Rate({ count, value, inactiveColor = '#ddd', size = 24, activeColor = 'red', onChange }) {
-     
-      const stars = Array.from({ length: count }, () => '🟊')
-      
-    const handleChange = (value) => {
-      onChange(value+1)
-    }
+
+            const stars = Array.from({ length: count }, () => '🟊')
+            
+      const handleChange = (value) => {
+            onChange(value+1)
+      }
 
       return (
             <div className="rating">

@@ -2,7 +2,7 @@ import React from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 import './MovieList.css'
 
-const MovieList = ({props, movies , filterByName}) => {
+const MovieList = ({props, movies , filterByName,filterByStar}) => {
       
    
       
@@ -18,6 +18,8 @@ const MovieList = ({props, movies , filterByName}) => {
                         ))
             
                   }
+
+                  
                   </div>
       )
 }

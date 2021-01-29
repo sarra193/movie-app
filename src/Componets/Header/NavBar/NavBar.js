@@ -2,20 +2,16 @@ import React, { useState}from 'react'
 import { Navbar, Nav, FormControl, Form } from 'react-bootstrap'
 import Rate from '../Rate/Rate'
 
-const NavBar = ({ movies, setSearch }) => {
+const NavBar = ({ movies, setSearch,setRating,rating ,handleChange}) => {
       
-      const [rating, setRating] = useState("")
-      const handleChange = (value) => {
-      setRating(value);
-      }
+
       return (
             <Navbar bg="dark" variant="dark">
 
       <Navbar.Brand href="#home">Navbar</Navbar.Brand>
       <Nav className="mr-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+      
                   </Nav>
 
                   <Form style={{marginRight:'400px'}} >
@@ -25,7 +21,7 @@ const NavBar = ({ movies, setSearch }) => {
             value={rating}
             activeColor ={'red'}
             inactiveColor={'#ddd'}
-            onChange={handleChange}  /> 
+            onChange={ handleChange} /> 
                   </Form>    
                   
       <Form inline>
