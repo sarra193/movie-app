@@ -1,26 +1,39 @@
 import React from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 import './MovieList.css'
-
-const MovieList = ({props, movies , filterByName,filterByStar}) => {
-      
-   
+import AddMovie from '../AddMovie/AddMovie'
+const MovieList = ({ filterByName,AddNewMovie,movies}) => {
       
       return (
             
 
-            
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', gap: ' 40px 30px' }}>
-
-                        {
+  /*     <div >
+      <div style={{display: "flex",flexDirection: "row",justifyContent: "space-evenly",flexWrap: "wrap",}}>
+            {
                         filterByName.map((movie, i) =>(
-                  <MovieCard {...movie} movies={movie} key={i}/>
+                              <MovieCard {...movie} movies={movie} key={i} />
+                              
                         ))
             
                   }
-
-                  
-                  </div>
+      </div>
+      <AddMovie AddNewMovie={AddNewMovie} />
+      </div> */
+                <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
+        }}
+      >
+        {movies.map((movie, i) => (
+          <MovieCard  {...movie} movies={movie} key={i} />
+        ))}
+      </div>
+   <AddMovie AddNewMovie={AddNewMovie} /> 
+    </div>
       )
 }
 

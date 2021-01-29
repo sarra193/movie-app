@@ -1,8 +1,8 @@
-import React, { useState}from 'react'
+import React from 'react'
 import { Navbar, Nav, FormControl, Form } from 'react-bootstrap'
 import Rate from '../Rate/Rate'
 
-const NavBar = ({ movies, setSearch,setRating,rating ,handleChange}) => {
+const NavBar = ({  setSearch,rating ,handleChange}) => {
       
 
       return (

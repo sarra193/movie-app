@@ -3,7 +3,7 @@ import {Card , ListGroup,ListGroupItem} from 'react-bootstrap'
 import Rate from '../Header/Rate/Rate'
 const MovieCard = ({ movies }) => {
       
-            const [rating, setRating] = useState( movies.imdbRating)
+            const [rating] = useState( movies.imdbRating)
 
      
       return (

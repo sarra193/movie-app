@@ -3,16 +3,26 @@
   z-index: 1;
   top: 152px;
   left: 350px;
-  height: 500px;
-  width: 700px;
+  height: 400px;
+  width: 600px;
   text-align: center;
   z-index: 99;
   background-color: white;
   margin: auto;
-
+  border-radius: 15px;
   width: 60%;
 
-  border: 5px solid #343425;
-
+  border: 2px solid #343425;
   padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 14px 28px, rgba(0, 0, 0, 0.4) 0px 10px 10px;
+}
+.btn-add {
+  width: 20%;
+  background: #2d3436;
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 40px;
+  z-index: 999;
+  transition: 0.6s linear;
+  border-radius: 40px;
 }
