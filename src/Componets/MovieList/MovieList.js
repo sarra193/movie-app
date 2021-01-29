@@ -7,33 +7,22 @@ const MovieList = ({ filterByName,AddNewMovie,movies}) => {
       return (
             
 
-  /*     <div >
-      <div style={{display: "flex",flexDirection: "row",justifyContent: "space-evenly",flexWrap: "wrap",}}>
-            {
-                        filterByName.map((movie, i) =>(
-                              <MovieCard {...movie} movies={movie} key={i} />
-                              
-                        ))
-            
-                  }
+            <div>
+            <div
+            style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            flexWrap: "wrap",
+            gap: '10px 20px'
+            }}
+            >
+            {movies.map((movie, i) => (
+            <MovieCard  {...movie} movies={movie} key={i} />
+            ))}
+            </div>
+      <AddMovie AddNewMovie={AddNewMovie} /> 
       </div>
-      <AddMovie AddNewMovie={AddNewMovie} />
-      </div> */
-                <div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-evenly",
-          flexWrap: "wrap",
-        }}
-      >
-        {movies.map((movie, i) => (
-          <MovieCard  {...movie} movies={movie} key={i} />
-        ))}
-      </div>
-   <AddMovie AddNewMovie={AddNewMovie} /> 
-    </div>
       )
 }
 

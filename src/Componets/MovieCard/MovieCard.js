@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {Card , ListGroup,ListGroupItem} from 'react-bootstrap'
 import Rate from '../Header/Rate/Rate'
+import altimg from '../../img/altimg.jpg'
 const MovieCard = ({ movies }) => {
       
             const [rating] = useState( movies.imdbRating)
@@ -8,13 +9,16 @@ const MovieCard = ({ movies }) => {
      
       return (
             <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={movies.Poster} />
+                  <Card.Img variant="top" src={movies.Poster} alt='img'/>
+                  
       <Card.Body>
       <Card.Title>{ movies.Title}</Card.Title>
       <Card.Text>
             {movies.Plot}
       </Card.Text>
-      </Card.Body>
+                  </Card.Body>
+                  
+
       <ListGroup className="list-group-flush">
             <ListGroupItem  readOnly = {true} disabled={true} >
             <Rate 

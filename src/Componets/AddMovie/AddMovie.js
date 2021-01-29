@@ -43,8 +43,11 @@
             
             return (
                   
-                        <div>
-            <button onClick={openModal}>Open Modal</button>
+                  <div>
+            <button class="icon-btn add-btn">
+            <div class="add-icon"></div>
+            <div class="btn-txt" onClick={openModal}>+</div>
+            </button>
             <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
